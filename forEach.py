@@ -45,3 +45,10 @@ vowelCount('Matt') // {a:1})
 vowelCount('hmmm') // {};
 vowelCount('I Am awesome and so are you') // {i: 1, a: 4, e: 3, o: 3, u: 1} 
 '''
+exampleArr = [5, 1, 2, 3, 10]
+def doubleValues(arr):
+  return [elm * 2 for elm in arr]
+
+def onlyEvenValues(arr):
+  return [elm for elm in arr if elm % 2 == 0]
+
