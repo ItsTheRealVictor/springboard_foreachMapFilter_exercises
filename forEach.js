@@ -128,4 +128,4 @@ function vowelCount(str){
   }
 
 
-console.log(vowelCount('fartfacebitcheee'))
+console.log(vowelCount('testy'))
