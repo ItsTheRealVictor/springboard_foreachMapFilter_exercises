@@ -45,6 +45,21 @@ vowelCount('hmmm') // {};
 vowelCount('I Am awesome and so are you') // {i: 1, a: 4, e: 3, o: 3, u: 1} 
 */
 
-function doubleValues(arr){
-    return arr
+// example 1
+const exampleArr = [5, 1, 2, 3, 10];
+const doubledArr = [];
+
+exampleArr.forEach(doubleValues);
+
+function doubleValues(elm, idx, arr) {
+  doubledArr.push(`${elm * 2}`);
+}
+
+// example 2
+const onlyEvenValuesArr = [];
+exampleArr.forEach(onlyEvenValues);
+function onlyEvenValues(e) {
+  if (e % 2 === 0) {
+    onlyEvenValuesArr.push(e);
+  }
 }
