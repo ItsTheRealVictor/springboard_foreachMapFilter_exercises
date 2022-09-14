@@ -52,3 +52,7 @@ def doubleValues(arr):
 def onlyEvenValues(arr):
   return [elm for elm in arr if elm % 2 == 0]
 
+exampleNames = ['colt','matt', 'tim', 'test']
+def showFirstAndLast(arr):
+  return [f'{elm[0]}{elm[-1]}' for elm in arr]
+print(showFirstAndLast(exampleNames))
