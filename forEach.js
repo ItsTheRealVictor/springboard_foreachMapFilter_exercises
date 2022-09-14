@@ -119,13 +119,22 @@ vowelCount('hmmm') // {};
 vowelCount('I Am awesome and so are you') // {i: 1, a: 4, e: 3, o: 3, u: 1} 
 */
 
-const vowels = 'aeiou'
-const vowelCountObj = {}
 function vowelCount(str){
-  str.forEach(function(arr){
-    arr[elm] += 1
+  const splitStr = str.split('') // why do I have to split the string parameter? 
+  const vowels = 'aeiou'
+  const vowelCountObj = {}
+
+  splitStr.forEach(function(char){
+    if (vowels.indexOf(char) !== -1){
+      if (vowelCountObj[char]){
+        vowelCountObj[char] += 1
+      } else {
+        vowelCountObj[char] = 1
+      }
+    }
   })
+  return vowelCountObj
   }
 
 
-console.log(vowelCount('testy'))
+console.log(vowelCount('testingtestinghello'))

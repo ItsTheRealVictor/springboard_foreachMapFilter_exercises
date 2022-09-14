@@ -56,3 +56,18 @@ exampleNames = ['colt','matt', 'tim', 'test']
 def showFirstAndLast(arr):
   return [f'{elm[0]}{elm[-1]}' for elm in arr]
 print(showFirstAndLast(exampleNames))
+
+def vowelCount(str):
+  vowels = 'aeiou'
+  vowelCount = {}
+  for char in str:
+    if char in vowels:
+      if char not in vowelCount:
+        vowelCount[char] = 1
+      else:
+        vowelCount[char] += 1
+
+  return vowelCount
+
+print(vowelCount('testingtestingblahblahaa'))
+
