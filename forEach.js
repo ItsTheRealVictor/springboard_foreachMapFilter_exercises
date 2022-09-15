@@ -120,10 +120,11 @@ vowelCount('I Am awesome and so are you') // {i: 1, a: 4, e: 3, o: 3, u: 1}
 */
 
 function vowelCount(str){
-  const splitStr = str.split('') // why do I have to split the string parameter? 
+  const lowerStr = str.toLocaleLowerCase()
+  const splitStr = lowerStr.split('') // why do I have to split the string parameter? (I peeked at the solution)
   const vowels = 'aeiou'
   const vowelCountObj = {}
-
+  
   splitStr.forEach(function(char){
     if (vowels.indexOf(char) !== -1){
       if (vowelCountObj[char]){
@@ -136,5 +137,3 @@ function vowelCount(str){
   return vowelCountObj
   }
 
-
-console.log(vowelCount('testingtestinghello'))
